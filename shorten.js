@@ -31,4 +31,5 @@ for (const entry of regexes) {
 	appendFile(`./files/${entry.file}`, results.join('\r\n'), err => { })
 }
 
-console.log("Overview done");
+console.log("Overview compiled in ./files/");
+console.log("Note: this only works with parsing gearbo(a)t logs.");

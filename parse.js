@@ -40,4 +40,5 @@ for (const chunk of chunks) {
 	appendFile('./files/chunks.txt', chunkFinal, err => { });
 }
 
-console.log('Done!')
+console.log(`Parsed ${unique.length} unique id${unique.length === 1 ? '' : 's'} into ${chunks.length} ban command chunk${chunks.length === 1 ? '' : 's'}`);
+console.log(`Chunk${chunks.length === 1 ? '' : 's'} can be found in ./files/chunks.txt`);
