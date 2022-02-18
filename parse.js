@@ -25,7 +25,7 @@ for (const id of unique) {
 	}
 
 	const newLength = COMMAND.length + (chunk.length * 21) + reason.length
-	if (newLength > 2000) {
+	if (newLength > 4000) {
 		chunks.push([...chunk]);
 		chunk.length = 0;
 	}
