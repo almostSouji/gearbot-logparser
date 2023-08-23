@@ -1,6 +1,6 @@
 const { readFileSync, appendFile } = require("node:fs");
 
-const PREFIX = "!";
+const PREFIX = ".";
 const COMMAND = `${PREFIX}mban`;
 const safe = new Set(["545364944258990091", "840710376831057920"]);
 
@@ -38,6 +38,7 @@ if (chunk.length) {
 for (const chunk of chunks) {
   const chunkFinal = `${COMMAND} ${chunk.join(" ")} ${reason}\r\n`;
   appendFile("./files/chunks.txt", chunkFinal, (err) => {});
+  appendFile("./files/ids.txt", chunk.join("\r\n"), () => {});
 }
 
 console.log(

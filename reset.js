@@ -1,11 +1,18 @@
-const { unlink, writeFile } = require('node:fs');
+const { unlink, writeFile } = require("node:fs");
 
-const cb = () => { }
+const cb = () => {};
 
-const files = ["chunks", "parse", "roleremove", "rename", "join"]
+const files = [
+  "chunks",
+  "parse",
+  "roleremove",
+  "rename",
+  "join",
+  "ids",
+];
 
 for (const file of files) {
-	unlink(`./files/${file}.txt`, cb);
+  unlink(`./files/${file}.txt`, cb);
 }
 
-writeFile('./files/parse.txt', '', undefined, cb);
+writeFile("./files/parse.txt", "", undefined, cb);
