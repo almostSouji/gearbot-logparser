@@ -9,6 +9,7 @@ const files = [
   "rename",
   "join",
   "ids",
+  "cleanlog",
 ];
 
 for (const file of files) {
